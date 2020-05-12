@@ -15,7 +15,7 @@ This is also a small initiative taken by us to spread the culture of open source
 
 |                                   
 
-<a href="https://www.ayanbiswas.me/"><img src="https://avatars3.githubusercontent.com/u/52851184?s=400&u=dea90a2bac4e991b2c5eddb7513e465b816c3476&v=4">width=150px height=150px /></a>
+<a href="https://www.ayanbiswas.me/"><img src="https://avatars3.githubusercontent.com/u/52851184?s=400&u=dea90a2bac4e991b2c5eddb7513e465b816c3476&v=4" width=150px height=150px /></a>
 
                           |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
