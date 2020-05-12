@@ -1,4 +1,4 @@
-# Contributing to Water Monitoring System
+# Contributing to Venue Booking and Management System
 
 We love your input! We want to make contributing to this project as easy and transparent as possible, whether it's:
 
