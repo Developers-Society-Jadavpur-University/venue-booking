@@ -57,7 +57,15 @@ git push -u origin <your_branch_name>
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/ayan-biswas0412/)
 
-|                                                                                         <a href="#" style="margin: 0; display: inline;"><img src="https://avatars3.githubusercontent.com/u/52851184?s=400&u=dea90a2bac4e991b2c5eddb7513e465b816c3476&v=4" width=100px height=100px /></a>                                                                                         |
+|                                                                                         <a href="#" style="margin: 0; display: inline-block;"><img src="https://avatars3.githubusercontent.com/u/46085747?s=400&u=9a300bc529f1b7f795993f67dda43f34c76aad89&v=4" width=100px height=100px /></a>                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
+|                                                                                                                                        **[Rahul Saikh](#)**                                 
+
+
+
+
+
+|                                                                                         <a href="#" style="margin: 0; display: inline-block;"><img src="https://avatars3.githubusercontent.com/u/52851184?s=400&u=dea90a2bac4e991b2c5eddb7513e465b816c3476&v=4" width=100px height=100px /></a>                                                                                         |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------: |
 |                                                                                                                                        **[Ayan Biswas](https://www.linkedin.com/in/ayanbiswas-juetceug/)**                                 
 
