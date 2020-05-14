@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css?family=Lora');
+li { list-style-type: none; }
+.form-wrapper {
+  margin: 50px auto 50px;
+  font-family: 'Lora', serif;
+  font-size: 1.09em;
+}
+.form-wrapper.login { margin-top: 120px; }
+.form-wrapper p { font-size: .8em; text-align: center; }
+.form-control:focus { box-shadow: none; }
+.form-wrapper {
+  border: 1px solid #80CED7;
+  border-radius: 5px;
+  padding: 25px 15px 0px 15px;
+}
+.form-wrapper.auth .form-title { color: #007EA7; }
+.home-wrapper button,
+.form-wrapper.auth button {
+  background: #007EA7;
+  color: white;
+}
+.home-wrapper {
+  margin-top: 150px;
+  border-radius: 5px;
+  padding: 10px;
+  border: 1px solid #80CED7;
+}
