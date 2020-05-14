@@ -1,5 +1,6 @@
 <?php include 'config.php' ?>
 <?php include 'controllers/auth.php' ?>
+<?php include 'header.php'?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
