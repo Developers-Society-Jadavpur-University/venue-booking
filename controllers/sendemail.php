@@ -58,3 +58,52 @@ function sendVerificationEmail($userEmail, $token)
         return false;
     }
 }
+
+function sendOTP($userEmail, $otp)
+{
+    global $mailer;
+    $body = '<!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+      <meta charset="UTF-8">
+      <title>VBMS</title>
+      <style>
+        .wrapper {
+          padding: 20px;
+          color: #444;
+          font-size: 1.3em;
+        }
+        a {
+          background: #592f80;
+          text-decoration: none;
+          padding: 8px 15px;
+          border-radius: 5px;
+          color: #fff;
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="wrapper">
+        <p>Your OTP for login to VBMS is  : '.$otp.'</p>
+      </div>
+    </body>
+
+    </html>';
+
+    // Create a message
+    $message = (new Swift_Message('VBMS Login OTP'))
+        ->setFrom(SENDER_EMAIL)
+        ->setTo($userEmail)
+        ->setBody($body, 'text/html');
+
+    // Send the message
+    $result = $mailer->send($message);
+
+    if ($result > 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
