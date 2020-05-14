@@ -35,22 +35,9 @@
             <label>Password</label>
             <input type="password" name="password" class="form-control form-control-lg">
           </div>
-          <!-- <div class="form-group">
-            <label>OTP</label>
-            <input type="number" id="otp-field" name="otp" class="form-control form-control-lg" disabled="true">
-          </div> -->
           <div class="form-group">
             <button type="submit" id="login-button" name="login-btn" class="btn btn-lg btn-block">Login</button>
           </div>
-          <!-- <script type="text/javascript"> 
-              function changeText(submitId){
-                  var submit = document.getElementById(submitId);
-                  var otp = document.getElementById('otp-field');
-                  submit.innerHTML = 'Submit OTP';
-                  otp.prop('disabled', false);
-                  return false;
-              };
-          </script> -->
         </form>
         <p>Don't yet have an account? <a href="signup.php">Sign up</a></p>
       </div>
