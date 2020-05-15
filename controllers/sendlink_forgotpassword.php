@@ -38,6 +38,7 @@ if (isset($_POST['forgotpass-btn'])) {
     // Check if email already exists
     $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
     $result = mysqli_query($conn, $sql);
+    
     if (mysqli_num_rows($result) > 0) {
         
         while($row = $result->fetch_assoc())
@@ -52,7 +53,8 @@ if (isset($_POST['forgotpass-btn'])) {
         
     }
     else{
-        $errors['email'] = "Email is not Registered in our system";
+        
+        $errors['email_fail'] = "Email is not Registered in our System";
     }
 
     
