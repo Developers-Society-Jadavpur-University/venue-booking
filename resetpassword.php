@@ -1,6 +1,22 @@
 <?php include 'config.php' ?>
-<?php include 'controllers/auth.php' ?>
+<?php include 'controllers/do_resetpassword.php' ?>
 <?php include 'header.php'?>
+<?php include 'sendmail.php'?>
+
+<?php
+
+$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+$url_components = parse_url($url);
+parse_str($url_components['query'],$params);
+session_start();
+$_SESSION['token'] = $params['token'];
+$token = $_SESSION['token'];
+/*if($token==null)
+{
+  header('location: login.php');
+}*/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,11 +28,12 @@
   <link rel="stylesheet" href="main.css">
   <title>VBMS - Login</title>
 </head>
+
 <body>
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form-wrapper auth login">
-        <h3 class="text-center form-title">Login</h3>
+        <h3 class="text-center form-title">Reset Password</h3>
         <?php if (count($errors) > 0): ?>
         <div class="alert alert-danger">
             <?php foreach ($errors as $error): ?>
@@ -26,23 +43,23 @@
             <?php endforeach;?>
         </div>
         <?php endif;?>
-        <form action="login.php" method="post">
-          <div class="form-group">
-            <label>Email</label>
+        <form action="resetpassword.php" method="post">
+          <!--<div class="form-group">
+            <br>
+            <label>Enter your New Password</label>
             <input type="email" name="email" class="form-control form-control-lg" value="<?php echo $username; ?>">
-          </div>
+          </div>-->
           <div class="form-group">
-            <label>Password</label>
+            <label>Enter your New Password</label>
             <input type="password" name="password" class="form-control form-control-lg">
           </div>
           <div class="form-group">
-            <button type="submit" id="login-button" name="login-btn" class="btn btn-lg btn-block">Login</button>
+            <button type="submit" name="resetpass-btn" class="btn btn-lg btn-block">Submit</button>
           </div>
         </form>
-        <p>Don't yet have an account? <a href="signup.php">Sign up</a></p>
+        <p><a href="login.php">Go to Login</a><p>
         
-        <p>Forgot Password ? <a href="forgotpassword.php">Click Here</a></p>
-      </div>
+        </div>
     </div>
   </div>
 </body>
