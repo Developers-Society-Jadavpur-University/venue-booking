@@ -40,8 +40,6 @@
           </div>
         </form>
         <p>Don't yet have an account? <a href="signup.php">Sign up</a></p>
-        
-        <p>Forgot Password ? <a href="forgotpassword.php">Click Here</a></p>
       </div>
     </div>
   </div>

@@ -8,21 +8,6 @@ This is also a small initiative taken by us to spread the culture of open source
 
 [![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/Developers-Society-Jadavpur-University/venue-booking?logo=github)](https://github.com/Developers-Society-Jadavpur-University/venue-booking) [![GitHub commit activity](https://img.shields.io/github/commit-activity/m/Developers-Society-Jadavpur-University/venue-booking?color=bluevoilet&logo=github)](https://github.com/Developers-Society-Jadavpur-University/venue-booking/commits/) [![GitHub repo size](https://img.shields.io/github/repo-size/Developers-Society-Jadavpur-University/venue-booking?logo=github)](https://github.com/Developers-Society-Jadavpur-University/venue-booking)
 
-## How to install the system in a linux based system
-
-**1.** Clone and keep the project directory (venue-booking) inside the /var/www folder (for apache)
-
-**2.** Import the sql from the [db.sql](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/db.sql) file and create the database in phpMyAdmin.
- 
-**3.** Change the credentials in [config.php](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/config.php) according to your local machine .
-
-**4.** Save the file and open any browser and run localhost. You can now run and contribute.
-
-**5.** For contribution please strictly follow [Contribute.md](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/Contribute.md) or see below.
-
-
-## How to contribute to this repository.
-
 **1.** Fork [this](https://github.com/Developers-Society-Jadavpur-University/venue-booking) repository.
 
 **2.** Clone the forked repository.
@@ -70,7 +55,7 @@ git push -u origin <your_branch_name>
 
 ## Project Admin
 
-[![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/Developers-Society-Jadavpur-University/)
+[![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/ayan-biswas0412/)
 
 
 
