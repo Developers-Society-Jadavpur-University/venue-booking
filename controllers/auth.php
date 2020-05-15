@@ -1,6 +1,8 @@
 <?php
 require_once 'sendemail.php';
-session_start();
+if(!isset($_SESSION)){
+    session_start();
+}
 $username = "";
 $email = "";
 $errors = [];
@@ -84,14 +86,15 @@ if (isset($_POST['login-btn'])) {
     $password = $_POST['password'];
 
     if (count($errors) === 0) {
-        $query = "SELECT * FROM users WHERE email=? or username=? LIMIT 1";
+        $query = "SELECT * FROM users WHERE email=? LIMIT 1";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param('ss', $email, $password);
+        $stmt->bind_param('s', $email);
 
         if ($stmt->execute()) {
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
-            if (password_verify($password, $user['password'])) { // if password matches
+            if (!empty($user)) {
+                if (password_verify($password, $user['password'])) { // if password matches
                 $stmt->close();
 
                 $_SESSION['id'] = $user['id'];
@@ -104,8 +107,11 @@ if (isset($_POST['login-btn'])) {
                 header('location: index.php');
                 exit(0);
             } else { // if password does not match
-                $errors['login_fail'] = "Wrong username / password";
+                $errors['login_fail'] = "<center>Wrong username / password</center>";
             }
+        } else {
+            $errors['login_fail'] = "<center>Account does not exist</center>";
+        }
         } else {
             $_SESSION['message'] = "Database error. Login failed!";
             $_SESSION['type'] = "alert-danger";

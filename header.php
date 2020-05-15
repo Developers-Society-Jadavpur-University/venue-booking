@@ -1,4 +1,3 @@
-<?php include 'config.php' ?>
 <?php include 'controllers/auth.php' ?>
 <!DOCTYPE html>
 <html lang="en">

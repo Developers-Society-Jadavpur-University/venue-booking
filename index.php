@@ -1,6 +1,7 @@
-<?php include 'config.php'?>
-<?php include 'controllers/auth.php'?>
-<?php
+<?php 
+require_once 'config.php';
+require_once 'controllers/auth.php';
+require_once 'header.php';
 // redirect user to login page if they're not logged in
 if (!isset($_SESSION['id'])) {
     header('location: login.php');

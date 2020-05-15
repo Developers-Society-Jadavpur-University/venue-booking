@@ -1,5 +1,8 @@
-<?php include 'config.php' ?>
-<?php include 'controllers/auth.php' ?>
+<?php
+require_once 'config.php';
+require_once 'controllers/auth.php';
+require_once 'header.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
