@@ -1,7 +1,7 @@
 <?php
 define('DB_SERVER', 'localhost');
-define('DB_USERNAME', 'ayan');
-define('DB_PASSWORD', 'AYAN@445bi');
+define('DB_USERNAME', 'root');
+define('DB_PASSWORD', '');
 define('DB_NAME', 'vbms');
 //if using gmail, first enable less secure app access in your gmail account
 //if using other smtp service, set the proper credentials in controllers/sendemail.php

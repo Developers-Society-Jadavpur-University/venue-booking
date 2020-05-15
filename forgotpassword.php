@@ -1,5 +1,5 @@
 <?php include 'config.php' ?>
-<?php include 'controllers/auth.php' ?>
+<?php include 'controllers/sendlink_forgotpassword.php' ?>
 <?php include 'header.php'?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form-wrapper auth login">
-        <h3 class="text-center form-title">Login</h3>
+        <h3 class="text-center form-title">Forgot Password</h3>
         <?php if (count($errors) > 0): ?>
         <div class="alert alert-danger">
             <?php foreach ($errors as $error): ?>
@@ -26,23 +26,23 @@
             <?php endforeach;?>
         </div>
         <?php endif;?>
-        <form action="login.php" method="post">
+        <form action="forgotpassword.php" method="post">
           <div class="form-group">
-            <label>Email</label>
+            <br>
+            <label>Enter your Registered email</label>
             <input type="email" name="email" class="form-control form-control-lg" value="<?php echo $username; ?>">
           </div>
-          <div class="form-group">
+          <!--<div class="form-group">
             <label>Password</label>
             <input type="password" name="password" class="form-control form-control-lg">
-          </div>
+          </div>-->
           <div class="form-group">
-            <button type="submit" name="login-btn" class="btn btn-lg btn-block">Login</button>
+            <button type="submit" name="forgotpass-btn" class="btn btn-lg btn-block">Submit</button>
           </div>
         </form>
-        <p>Don't yet have an account? <a href="signup.php">Sign up</a></p>
+        <p><a href="login.php">Go to Login</a><p>
         
-        <p>Forgot Password ? <a href="forgotpassword.php">Click Here</a></p>
-      </div>
+        </div>
     </div>
   </div>
 </body>
