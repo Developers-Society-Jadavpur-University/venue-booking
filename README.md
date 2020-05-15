@@ -47,6 +47,36 @@ git push -u origin <your_branch_name>
 
 **9.** **Congratulations!** Sit and relax, you've made your contribution to [Venue Booking and Management system](https://github.com/Developers-Society-Jadavpur-University/venue-booking) project.
 
+## How to install the system in a windows based system :
+
+**0.** Download and Install XAMPP : https://www.apachefriends.org/index.html
+
+**1.** Clone and keep the project directory (venue-booking) inside the xampp/htdocs folder ( XAMPP is possibly installed on your `C: drive`)
+
+**2.** Open XAMPP Control Panel:
+
+- Step-1: Start: `Apache`
+- Step-2: Start: `MySQL`
+- Step-3: Admin:  `Apache` ----> This Opens the Localhost on your default browser.
+- Step-4: On the LocalHost Page : Click the `PhpMyAdmin` option on the NavBar.
+
+**3.** On the phpmyadmin Page : 
+
+- Hit the New Database Icon on the left Menu Bar
+- Name the New Database select the Drop-down menu `utf8mb4_general_ci` 
+- Hit the `go` button.
+- Select the newly created Database 
+- select the `import` option from the Navbar.
+
+**4.** Import the sql from the [db.sql](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/db.sql) file
+
+- Upload the file mentioned above i.e. `db.sql` .
+- Hit `go`.
+
+**6.** Open your default browser and run localhost. You can now run and contribute.
+
+**7.** For contribution please strictly follow [Contribute.md](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/Contribute.md) or see below.
+
 
 ## Useful Resources
 
