@@ -131,7 +131,7 @@
                                     </a>
                                     <ul class="pcoded-submenu">
                                         <li class=" ">
-                                            <a href="#">
+                                            <a href="./book_room.php">
                                                 <span class="pcoded-mtext">Add New</span>
                                             </a>
                                         </li>
