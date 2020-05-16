@@ -19,9 +19,9 @@ if (isset($_GET['token'])) {
             $_SESSION['email'] = $user['email'];
             $_SESSION['role'] = $user['role'];
             $_SESSION['verified'] = true;
-            $_SESSION['message'] = "Your email address has been verified successfully";
+            $_SESSION['message'] = "Please Enter Your New Password";
             $_SESSION['type'] = 'alert-success';
-            header('location: index.php');
+            header('location: resetpassword.php');
             
         }
     } else {

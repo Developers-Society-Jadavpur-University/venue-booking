@@ -15,25 +15,13 @@ if ($conn -> connect_errno) {
 
 // SIGN UP USER
 if (isset($_POST['forgotpass-btn'])) {
-    /*if (empty($_POST['username'])) {
-        $errors['username'] = 'Username required';
-    }*/
+    
     if (empty($_POST['email'])) {
         $errors['email'] = 'Email required';
     }
     
-    /*if (empty($_POST['password'])) {
-        $errors['password'] = 'Password required';
-    }
-    if (isset($_POST['password']) && $_POST['password'] !== $_POST['passwordConf']) {
-        $errors['passwordConf'] = 'The two passwords do not match';
-    }*/
-
-    
     $email = $_POST['email'];
-    
-    //$token = bin2hex(random_bytes(50)); // generate unique token
-    //$password = password_hash($_POST['password'], PASSWORD_DEFAULT); //encrypt password
+   
 
     // Check if email already exists
     $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
@@ -47,6 +35,8 @@ if (isset($_POST['forgotpass-btn'])) {
         }
         /*Start the process of forgot password here*/
         sendpasswordResetEmail($email,$token);
+        $_SESSION['message'] = "An Email has been sent to you with link for changing password";
+        $_SESSION['type'] = 'alert-success';
         header('location: forgotpassword.php');
         /*Here a message has to be shown that your password reset email has been sent */
 

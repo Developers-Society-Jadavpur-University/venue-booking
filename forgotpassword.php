@@ -16,16 +16,18 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4 offset-md-4 form-wrapper auth login">
-        <h3 class="text-center form-title">Forgot Password</h3>
-        <?php if (count($errors) > 0): ?>
-        <div class="alert alert-danger">
-            <?php foreach ($errors as $error): ?>
-            <li>
-            <?php echo $error; ?>
-            </li>
-            <?php endforeach;?>
+         <!-- Display messages -->
+        <?php if (isset($_SESSION['message'])): ?>
+        <div class="alert <?php echo $_SESSION['type'] ?>">
+          <?php
+            echo $_SESSION['message'];
+            unset($_SESSION['message']);
+            unset($_SESSION['type']);
+          ?>
         </div>
         <?php endif;?>
+
+        <h3 class="text-center form-title">Forgot Password</h3>
         <form action="forgotpassword.php" method="post">
           <div class="form-group">
             <br>
