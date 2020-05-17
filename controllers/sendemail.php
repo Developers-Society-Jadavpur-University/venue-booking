@@ -88,14 +88,15 @@ function sendpasswordResetEmail($userEmail, $token)
     <body>
       <div class="wrapper">
         <p>You have successfully submitted a forgot password request on our VBMS Portal. Please click on the link below to Reset your password:.</p>
-        <a href="http://localhost/venue-booking/resetpassword.php?token=' . $token . '">Reset Password!</a>
+        
+        <a href="http://localhost/venue-booking/reset_passemail.php?token=' . $token . '">Reset Password!</a>
       </div>
     </body>
 
     </html>';
 
     // Create a message
-    $message = (new Swift_Message('Verify your email'))
+    $message = (new Swift_Message('Reset your VBMS Password'))
         ->setFrom(SENDER_EMAIL)
         ->setTo($userEmail)
         ->setBody($body, 'text/html');

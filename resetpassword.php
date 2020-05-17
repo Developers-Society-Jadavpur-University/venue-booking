@@ -1,21 +1,7 @@
 <?php include 'config.php' ?>
 <?php include 'controllers/do_resetpassword.php' ?>
 <?php include 'header.php'?>
-<?php include 'sendmail.php'?>
-
-<?php
-
-$url = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-$url_components = parse_url($url);
-parse_str($url_components['query'],$params);
-session_start();
-$_SESSION['token'] = $params['token'];
-$token = $_SESSION['token'];
-/*if($token==null)
-{
-  header('location: login.php');
-}*/
-?>
+<?php session_start()?>
 
 <!DOCTYPE html>
 <html lang="en">

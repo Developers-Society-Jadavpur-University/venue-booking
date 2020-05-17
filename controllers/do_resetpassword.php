@@ -8,19 +8,19 @@ if (isset($_POST['resetpass-btn']))
 {
     
     
-    if (isset($_SESSION['token'])) 
+    if (isset($_SESSION['email'])) 
     {
-      $token = $_SESSION['token'];
+      $email = $_SESSION['email'];
       
       $password = password_hash($_POST['password'], PASSWORD_DEFAULT); //encrypt password
-      $sql = "SELECT * FROM users WHERE token='$token' LIMIT 1";
+      $sql = "SELECT * FROM users WHERE email='$email' LIMIT 1";
       $result = mysqli_query($conn, $sql);
 
     
 
     if (mysqli_num_rows($result) > 0) {
         //$user = mysqli_fetch_assoc($result);
-        $query = "UPDATE users SET password='$password' WHERE token='$token'";
+        $query = "UPDATE users SET password='$password' WHERE email='$email'";
 
         if (mysqli_query($conn, $query)) 
         {
