@@ -118,16 +118,12 @@ git push -u origin <your_branch_name>
 **7.** For contribution please strictly follow [Contribute.md](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/Contribute.md) or see below.
 
 
-
-**7.** For contribution please strictly follow [Contribute.md](https://github.com/Developers-Society-Jadavpur-University/venue-booking/blob/master/Contribute.md) or see below.
-
-
 ## Useful Resources
 
 - [Git and GitHub](https://www.digitalocean.com/community/tutorials/how-to-use-git-a-reference-guide)
 
 
-## Project Admin
+## Project Admins and Maintainers
 
 [![Maintenance](https://img.shields.io/maintenance/yes/2020?color=green&logo=github)](https://github.com/ayan-biswas0412/)
 

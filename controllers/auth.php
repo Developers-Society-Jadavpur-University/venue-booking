@@ -81,6 +81,7 @@ if (isset($_POST['login-btn'])) {
         $errors['password'] = 'Password required';
     }
     //this part needs changes - username and/or email requirement needs to be fixed
+    
     $email = $_POST['email'];
     $username = $_POST['email'];
     $password = $_POST['password'];
@@ -94,7 +95,8 @@ if (isset($_POST['login-btn'])) {
             $result = $stmt->get_result();
             $user = $result->fetch_assoc();
             if (!empty($user)) {
-                if (password_verify($password, $user['password'])) { // if password matches
+                if (password_verify($password, $user['password'])) 
+                { // if password matches
                 $stmt->close();
 
                 $_SESSION['id'] = $user['id'];

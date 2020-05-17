@@ -104,9 +104,12 @@ function sendpasswordResetEmail($userEmail, $token)
     // Send the message
     $result = $mailer->send($message);
 
-    if ($result > 0) {
+    if ($result > 0) 
+    {
         return true;
-    } else {
+    } 
+    else 
+    {
         return false;
     }
 }
