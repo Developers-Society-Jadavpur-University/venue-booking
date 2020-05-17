@@ -11,14 +11,22 @@
     <link rel="stylesheet" type="text/css" href="..\files\bower_components\bootstrap\css\bootstrap.min.css">
     <!-- themify-icons line icon -->
     <link rel="stylesheet" type="text/css" href="..\files\assets\icon\themify-icons\themify-icons.css">
+    <!-- Date-time picker css -->
+    <link rel="stylesheet" type="text/css" href="..\files\assets\pages\advance-elements\css\bootstrap-datetimepicker.css">
+    <!-- font awesome -->
+    <link rel="stylesheet" type="text/css" href="..\files\assets\icon\font-awesome\css\font-awesome.min.css">
+    <!-- Switch component css -->
+    <link rel="stylesheet" type="text/css" href="..\files\bower_components\switchery\css\switchery.min.css">
+    <!-- Tags css -->
+    <link rel="stylesheet" type="text/css" href="..\files\bower_components\bootstrap-tagsinput\css\bootstrap-tagsinput.css">
+    <!-- Date-Dropper css -->
+    <link rel="stylesheet" type="text/css" href="..\files\bower_components\datedropper\css\datedropper.min.css">
     <!-- ico font -->
     <link rel="stylesheet" type="text/css" href="..\files\assets\icon\icofont\css\icofont.css">
     <!-- feather Awesome -->
     <link rel="stylesheet" type="text/css" href="..\files\assets\icon\feather\css\feather.css">
-    <!-- jpro forms css -->
-    <link rel="stylesheet" type="text/css" href="..\files\assets\pages\j-pro\css\demo.css">
-    <link rel="stylesheet" type="text/css" href="..\files\assets\pages\j-pro\css\font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" href="..\files\assets\pages\j-pro\css\j-pro-modern.css">
+    <!--forms-wizard css-->
+    <link rel="stylesheet" type="text/css" href="..\files\bower_components\jquery.steps\css\jquery.steps.css">
     <!-- Style.css -->
     <link rel="stylesheet" type="text/css" href="..\files\assets\css\style.css">
     <link rel="stylesheet" type="text/css" href="..\files\assets\css\jquery.mCustomScrollbar.css">
@@ -167,153 +175,186 @@
                                     <div class="page-body">
                                         <div class="row">
                                             <div class="col-sm-12">
+                                                <!-- Form wizard with validation card start -->
                                                 <div class="card">
                                                     <div class="card-header">
                                                         <h5>Book Now</h5>
-                                                        <span>Room Booking Requisition Form</span>
+                                                        <span>All * marked fields are mandatory</span>
 
                                                     </div>
                                                     <div class="card-block">
-                                                        <div class="j-wrapper j-wrapper-640">
-                                                            <form action="j-pro/php/action.php" method="post" class="j-pro j-multistep" id="j-pro" novalidate="">
-                                                                <!-- end /.header-->
-                                                                <div class="j-content">
-                                                                    <fieldset>
-                                                                        <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
-                                                                            <span>Step 1/3 - Personal info</span>
-                                                                        </div>
-                                                                        <!-- start name -->
-                                                                        <div class="j-unit">
-                                                                            <label class="j-label">Your name</label>
-                                                                            <div class="j-input">
-                                                                                <label class="j-icon-left" for="name">
-                                                                                    <i class="icofont icofont-ui-user"></i>
-                                                                                </label>
-                                                                                <input type="text" id="name" name="name">
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end name -->
-                                                                        <!-- start email phone -->
-                                                                        <div class="j-row">
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Your email</label>
-                                                                                <div class="j-input">
-                                                                                    <label class="j-icon-left" for="email">
-                                                                                        <i class="icofont icofont-envelope"></i>
-                                                                                    </label>
-                                                                                    <input type="email" id="email" name="email">
+                                                        <div class="row">
+                                                            <div class="col-md-12">
+                                                                <div id="wizard">
+                                                                    <section>
+                                                                        <form class="wizard-form" id="example-advanced-form" action="#">
+                                                                            <h3>Applicant Information</h3>
+                                                                            <fieldset>
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="userName-2" class="block">Full Name *</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-4">
+                                                                                        <input id="userName-2" name="userName" type="text" class="required form-control">
+                                                                                    </div>
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="email-2" class="block">Email *</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-4">
+                                                                                        <input id="email-2" name="email" type="email" class="required form-control">
+                                                                                    </div>
+                                                                                    
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Phone/Mobile</label>
-                                                                                <div class="j-input">
-                                                                                    <label class="j-icon-left" for="phone">
-                                                                                        <i class="icofont icofont-phone"></i>
-                                                                                    </label>
-                                                                                    <input type="text" id="phone" name="phone">
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="applicant-type" class="block">Applying as *</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-4">
+                                                                                        <select name="select" id="applicant-type" class=" required form-control">
+                                                                                            <option value="opt1">Select</option>
+                                                                                            <option value="opt2">Individual Student Body</option>
+                                                                                            <option value="opt3">Club/Society</option>
+                                                                                            <option value="opt4">Department</option>
+                                                                                        </select>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-2">
+                                                                                        <label for="applicant-detail" class="block">Name of Applicant Organisation/Group *</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-4">
+                                                                                        <input id="applicant-detail" name="applicant-detail" type="text" class="required form-control">
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end email phone -->
-                                                                    </fieldset>
-                                                                    <fieldset>
-                                                                        <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
-                                                                            <span>Step 2/3 - Booking details</span>
-                                                                        </div>
-                                                                        
-                                                                        <!-- start guests -->
-                                                                        <div class="j-row">
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Approximate Number of guests</label>
-                                                                                <div class="j-input">
-                                                                                    <label class="j-icon-left" for="adults">
-                                                                                        <i class="icofont icofont-waiter"></i>
-                                                                                    </label>
-                                                                                    <input type="text" id="adults" name="adults">
-                                                                                    <span class="j-tooltip j-tooltip-right-top">Number of guests</span>
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-12 col-lg-2">
+                                                                                        <label for="phone" class="block">Phone *</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-4">
+                                                                                        <input id="phone" name="phone" type="number" class="form-control required">
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Select Event Type</label>
-                                                                                <div class="j-input">
-                                                                                   
-                                                                                    <!-- <input type="text" id="children" name="children"> -->
-                                                                                    <select name="select" id="children">
-                                                                                        <option value="opt2">Fest</option>
-                                                                                        <option value="opt3">Official Event</option>
-                                                                                        <option value="opt4">Freshers' Welcome</option>
-                                                                                        <option value="opt5">Other Departmental Event</option>
-                                                                                        <option value="opt6">Others</option>
-                                                                                    </select>
-                                                                                    <span class="j-tooltip j-tooltip-right-top">Select the type of event</span>
+                                                                            </fieldset>
+                                                                            <h3> Venue Details </h3>
+                                                                            <fieldset>
+                                                                                
+                                                                            </fieldset>
+                                                                            <h3> Guest Details </h3>
+                                                                            <fieldset>
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-sm-12 col-xl-6 m-b-30">
+                                                                                        <h4 class="sub-title">Select all the categories of guests applicable</h4>
+                                                                                        <div class="border-checkbox-section">
+                                                                                            
+                                                                                            <div class="border-checkbox-group border-checkbox-group-info">
+                                                                                                <input class="border-checkbox" type="checkbox" id="checkbox1">
+                                                                                                <label class="border-checkbox-label" for="checkbox1">JU students and/or faculty</label>
+                                                                                            </div>
+                                                                                            <div class="border-checkbox-group border-checkbox-group-info">
+                                                                                                <input class="border-checkbox" type="checkbox" id="checkbox2">
+                                                                                                <label class="border-checkbox-label" for="checkbox2">Students and/or faculty from other institutions</label>
+                                                                                            </div>
+                                                                                            <div class="border-checkbox-group border-checkbox-group-info">
+                                                                                                <input class="border-checkbox" type="checkbox" id="checkbox3">
+                                                                                                <label class="border-checkbox-label" for="checkbox3">Business Professionals</label>
+                                                                                            </div>
+                                                                                            <div class="border-checkbox-group border-checkbox-group-info">
+                                                                                                <input class="border-checkbox" type="checkbox" id="checkbox4">
+                                                                                                <label class="border-checkbox-label" for="checkbox4">Authority Personnel</label>
+                                                                                            </div>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                        <!-- end guests -->
-                                                                        <!-- start date -->
-                                                                        <div class="j-row">
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Check-in date</label>
-                                                                                <div class="j-input">
-                                                                                    <label class="j-icon-left" for="date_from">
-                                                                                        <i class="icofont icofont-ui-calendar"></i>
-                                                                                    </label>
-                                                                                    <input type="text" id="date_from" name="date_from" readonly="">
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-3">
+                                                                                        <label for="fooding" class="block">Are there any plans for fooding?</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-8 col-lg-9">
+                                                                                        <select name="select" id="fooding" class=" required form-control">
+                                                                                            <option value="opt2">Yes</option>
+                                                                                            <option value="opt3">No</option>
+                                                                                        </select>
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="j-span6 j-unit">
-                                                                                <label class="j-label">Check-out date</label>
-                                                                                <div class="j-input">
-                                                                                    <label class="j-icon-left" for="date_to">
-                                                                                        <i class="icofont icofont-ui-calendar"></i>
-                                                                                    </label>
-                                                                                    <input type="text" id="date_to" name="date_to" readonly="">
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-12 col-lg-3">
+                                                                                            <label for="number-guests" class="block">Number of guests expected</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-12 col-lg-9">
+                                                                                        <input id="number-guests" name="applicant-detail" type="number" class="required form-control">
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end date -->
-                                                                        <div class="j-row">
-                                                                        <div class="j-span12 j-unit">
-                                                                                <label class="j-label">Purpose (in brief)</label>
-                                                                                <div class="j-input">
-                                                                                    <textarea type="text" id="purpose" name="purpose" rows="10" cols="12" class="form-control" placeholder="Mention your purpose in brief" required></textarea>
-                                                                                    <span class="j-tooltip j-tooltip-right-top">Mention your purpose in brief</span>
+                                                                            </fieldset>
+                                                                            <h3> Review </h3>
+                                                                            <fieldset>
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="Company-2" class="block">Event:</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-8 col-lg-10">
+                                                                                        <input id="Company-2" name="Company:" type="text" class="form-control required">
+                                                                                    </div>
                                                                                 </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </fieldset>
-                                                                    <fieldset>
-                                                                        <div class="j-divider-text j-gap-top-20 j-gap-bottom-45">
-                                                                            <span>Step 3/3 - Comments</span>
-                                                                        </div>
-                                                                        <!-- start message -->
-                                                                        <div class="j-unit">
-                                                                            <label class="j-label">Comments/Message</label>
-                                                                            <div class="j-input">
-                                                                                <textarea spellcheck="false" name="message"></textarea>
-                                                                            </div>
-                                                                        </div>
-                                                                        <!-- end message -->
-                                                                    </fieldset>
-                                                                    
-                                                                    <!-- start response from server -->
-                                                                    <div class="j-response"></div>
-                                                                    <!-- end response from server -->
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="CountryW-2" class="block">Guest</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-8 col-lg-10">
+                                                                                        <input id="CountryW-2" name="Country" type="text" class="form-control required">
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="form-group row">
+                                                                                    <div class="col-md-4 col-lg-2">
+                                                                                        <label for="Position-2" class="block">Venue</label>
+                                                                                    </div>
+                                                                                    <div class="col-md-8 col-lg-10">
+                                                                                        <input id="Position-2" name="Position" type="text" class="form-control required">
+                                                                                    </div>
+                                                                                </div>
+                                                                            </fieldset>
+                                                                        </form>
+                                                                    </section>
                                                                 </div>
-                                                                <!-- end /.content -->
-                                                                <div class="j-footer">
-                                                                    <button type="submit" class="btn btn-primary j-multi-submit-btn">Confirm Booking</button>
-                                                                    <button type="button" class="btn btn-primary j-multi-next-btn">Next</button>
-                                                                    <button type="button" class="btn btn-default m-r-20 j-multi-prev-btn">Back</button>
-                                                                </div>
-                                                                <!-- end /.footer -->
-                                                            </form>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!-- Form wizard with validation card end -->
+                                               
                                             </div>
                                         </div>
+                                        <!-- Edit With Click card start -->
+                                        <div class="card" style="display:block;">
+                                            <div class="card-header">
+                                                <h5>Add your desired Room(s) and Venue</h5>
+                                                <span>Click on cell to perform edit action then Enter for save</span>
+                                                <span>Click on "Add Row" to add an entry and on "Delete Row" to delete the last entry</span>
+
+                                            </div>
+                                            <div class="card-block">
+                                                <div class="table-responsive">
+                                                    <table class="table table-striped table-bordered" id="example-1">
+                                                        <thead>
+                                                            <tr>
+                                                                <th>#</th>
+                                                                <th>Venue</th>
+                                                                <th>Room</th>
+                                                                <th>Capacity</th>
+                                                                <th>A/C Required</th>
+                                                                <th>Check-In (e.g. dd/mm/yyyy hh:mm:AM/PM)</th>
+                                                                <th>Check-Out (e.g. dd/mm/yyyy hh:mm:AM/PM)</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                                <button type="button" class="btn btn-primary waves-effect waves-light add" onclick="add_row();">Add Row
+                                                </button>
+                                                <button type="button" class="btn btn-danger waves-effect waves-light delete" onclick="delete_row();">Delete Row
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <!-- Edit With Click card end -->
                                     </div>
                                     <!-- Page body end -->
                                 </div>
@@ -334,22 +375,36 @@
     <script type="text/javascript" src="..\files\bower_components\jquery-ui\js\jquery-ui.min.js"></script>
     <script type="text/javascript" src="..\files\bower_components\popper.js\js\popper.min.js"></script>
     <script type="text/javascript" src="..\files\bower_components\bootstrap\js\bootstrap.min.js"></script>
-    <!-- j-pro js -->
-    <script type="text/javascript" src="..\files\assets\pages\j-pro\js\jquery.ui.min.js"></script>
-    <script type="text/javascript" src="..\files\assets\pages\j-pro\js\jquery.maskedinput.min.js"></script>
-    <script type="text/javascript" src="..\files\assets\pages\j-pro\js\jquery.j-pro.js"></script>
     <!-- jquery slimscroll js -->
     <script type="text/javascript" src="..\files\bower_components\jquery-slimscroll\js\jquery.slimscroll.js"></script>
     <!-- modernizr js -->
     <script type="text/javascript" src="..\files\bower_components\modernizr\js\modernizr.js"></script>
+    <script type="text/javascript" src="..\files\bower_components\modernizr\js\css-scrollbars.js"></script>
+    <!-- Editable-table js -->
+    <script type="text/javascript" src="..\files\assets\pages\edit-table\jquery.tabledit.js"></script>
+    <script type="text/javascript" src="..\files\assets\pages\edit-table\editable2.js"></script>
+    <!-- Switch component js -->
+    <script type="text/javascript" src="..\files\bower_components\switchery\js\switchery.min.js"></script>
+    <!-- Tags js -->
+    <script type="text/javascript" src="..\files\bower_components\bootstrap-tagsinput\js\bootstrap-tagsinput.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.10.4/typeahead.bundle.min.js"></script>
     <!-- i18next.min.js -->
     <script type="text/javascript" src="..\files\bower_components\i18next\js\i18next.min.js"></script>
     <script type="text/javascript" src="..\files\bower_components\i18next-xhr-backend\js\i18nextXHRBackend.min.js"></script>
     <script type="text/javascript" src="..\files\bower_components\i18next-browser-languagedetector\js\i18nextBrowserLanguageDetector.min.js"></script>
     <script type="text/javascript" src="..\files\bower_components\jquery-i18next\js\jquery-i18next.min.js"></script>
-    <!-- Custom js -->
-    <script type="text/javascript" src="..\files\assets\pages\j-pro\js\custom\booking-multistep.js"></script>
-
+    <!-- Date-dropper js -->
+    <script type="text/javascript" src="..\files\bower_components\datedropper\js\datedropper.min.js"></script>
+    <!--Forms - Wizard js-->
+    <script src="..\files\bower_components\jquery.cookie\js\jquery.cookie.js"></script>
+    <script src="..\files\bower_components\jquery.steps\js\jquery.steps.js"></script>
+    <script src="..\files\bower_components\jquery-validation\js\jquery.validate.js"></script>
+    <!-- Validation js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script type="text/javascript" src="..\files\assets\pages\form-validation\validate.js"></script>
+     <!-- Custom js -->
+     <script src="..\files\assets\pages\forms-wizard-validation\form-wizard.js"></script>
     <script src="..\files\assets\js\pcoded.min.js"></script>
     <script src="..\files\assets\js\vartical-layout.min.js"></script>
     <script src="..\files\assets\js\jquery.mCustomScrollbar.concat.min.js"></script>
